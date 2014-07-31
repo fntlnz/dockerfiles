@@ -1,10 +1,8 @@
 # NGINX
 Version: **1.6.0**
 
-## Description
-TODO
-
 ## Usage
 ```bash
-docker run -d -v /local/log/path:/var/log/nginx -v /local/www/path:/var/www -v /local/conf/path:/usr/local/nginx/conf fntlnz/nginx -c '/usr/local/nginx/conf/nginx.conf'
+docker pull fntlnz/nginx
+docker run -d -v /local/log/path:/var/log/nginx -v /local/www/path:/var/www -v /local/conf/path:/usr/local/nginx/conf fntlnz/nginx:latest -c '/usr/local/nginx/conf/nginx.conf'
 ```
