@@ -1,4 +1,5 @@
+.PHONY: build
 version = latest
 
-all:
+build:
 	docker build -t fntlnz/haproxy:$(version) .
