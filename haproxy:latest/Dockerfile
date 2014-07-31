@@ -1,7 +1,7 @@
 # HAProxy
 # @version 1.5.3
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
-FROM tianon/centos:latest
+FROM centos:latest
 
 MAINTAINER Lorenzo Fontana, fontanalorenzo@me.com
 
