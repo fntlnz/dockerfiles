@@ -1,7 +1,7 @@
 # PHP Debug
 # @version 5.5.15
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
-FROM centos:latest
+FROM centos:centos6
 
 MAINTAINER Lorenzo Fontana, fontanalorenzo@me.com
 
