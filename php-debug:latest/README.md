@@ -6,7 +6,7 @@ This Dockerfile compiles PHP with debug mode enabled, useful for PHP extension d
 
 ## Usage
 ```bash
-docker pull fntlnz/php-debugls
+docker pull fntlnz/php-debug:latest
 ```
 
 Check the PHP version
