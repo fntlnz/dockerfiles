@@ -13,7 +13,7 @@ RUN wget -nv -O - http://uk1.php.net/distributions/php-5.5.15.tar.gz | tar zx
 
 WORKDIR php-5.5.15
 
-RUN ./configure --prefix=/usr/local/php --enable-debug --enable-maintainer-zts --enable-cli --with-readline
+RUN ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc/ --enable-debug --enable-maintainer-zts --enable-cli --with-readline
 
 RUN make -j
 RUN make install
