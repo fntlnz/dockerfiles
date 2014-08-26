@@ -1,7 +1,7 @@
 # Nginx
 # @version 1.6.0
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
-FROM centos:1.6.0
+FROM centos:latest
 
 MAINTAINER Lorenzo Fontana, fontanalorenzo@me.com
 
