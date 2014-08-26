@@ -1,5 +1,5 @@
 # PHP Debug
-Version: **5.5.16**
+Version: **5.5.15**
 
 This Dockerfile compiles PHP with debug mode enabled, useful for PHP extension development.
 
@@ -14,7 +14,7 @@ Check the PHP version
 docker run --rm  fntlnz/php-debug:latest php -v
 
 Output:
-PHP 5.5.16 (cli) (built: Aug 26 2014 22:50:14) (DEBUG)
+PHP 5.5.15 (cli) (built: Aug 10 2014 13:10:06) (DEBUG)
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
 ```
