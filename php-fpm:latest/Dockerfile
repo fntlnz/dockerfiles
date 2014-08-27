@@ -6,7 +6,8 @@ FROM centos:centos6
 MAINTAINER Lorenzo Fontana, fontanalorenzo@me.com
 
 # Prerequisites
-RUN yum install gcc gcc-c++ kernel-devel libxml2-devel libxslt-devel openssl-devel libcurl-devel libicu-devel readline-devel bzip2-devel libjpeg-turbo-devel libpng-devel ImageMagick-devel tar wget   -y
+RUN yum install gcc gcc-c++ kernel-devel libxml2-devel libxslt-devel openssl-devel libcurl-devel libicu-devel readline-devel bzip2-devel libjpeg-turbo-devel libpng-devel ImageMagick-devel tar wget python-setuptools  -y
+RUN easy_install supervisor
 
 # Download PHP and extract
 RUN wget -nv -O - http://uk1.php.net/distributions/php-5.5.16.tar.gz | tar zx
@@ -32,8 +33,15 @@ RUN make
 RUN make install
 RUN make test
 
+RUN useradd fpm
+
 RUN ln -s /usr/local/php/bin/* /usr/local/bin
+RUN ln -s /usr/local/php/sbin/php-fpm /usr/local/bin
+
+COPY supervisord.conf /etc/supervisord.conf
 
 VOLUME ["/usr/local/php/etc"]
 
 WORKDIR /
+
+CMD ["/usr/bin/supervisord"]
