@@ -16,7 +16,7 @@ Check the PHP version
 docker run --rm  fntlnz/php-debug:5.6.2 php -v
 
 Output:
-PHP 5.6.0 (cli) (built: Sep 18 2014 09:31:22) (DEBUG)
+PHP 5.6.2 (cli) (built: Oct 28 2014 00:06:33) (DEBUG)
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
 ```
@@ -25,7 +25,7 @@ Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
 Compile and test your extension
 
 ```
-docker run -i -t -v ~/your-ext-path:/your-ext  fntlnz/php-debug:5.6.0 bash
+docker run -i -t -v ~/your-ext-path:/your-ext  fntlnz/php-debug:5.6.2 bash
 cd /your-ext
 phpize
 ./configure
