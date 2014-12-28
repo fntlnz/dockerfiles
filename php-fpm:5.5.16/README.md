@@ -13,6 +13,7 @@ For a complete example see the [nginx-fpm](https://github.com/fntlnz/dockerfiles
 ## Build
 
 **Optional**
+
 1. Open the Dockerfile
 2. Download packages you need
 3. Add your extensions/options to the configure command
