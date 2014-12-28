@@ -1,0 +1,11 @@
+web:
+    image: fntlnz/nginx
+    volumes:
+        - nginx/conf:/usr/local/nginx/conf
+        - nginx/logs:/usr/local/nginx/logs
+        - www:/var/www
+fpm:
+    image: fntlnz/php-fpm:5.5.16
+    volumes:
+        - php/etc:/usr/local/php/etc
+        - www:/var/www
