@@ -1,11 +1,11 @@
 # RabbitMQ
 # @version 3.4.1
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
-FROM centos:latest
+FROM centos:centos7
 
 MAINTAINER Lorenzo Fontana, fontanalorenzo@me.com
 
-RUN su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm'
+RUN su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm'
 RUN yum install -y install wget telnet tar erlang
 RUN wget -nv -O - http://www.rabbitmq.com/releases/rabbitmq-server/v3.4.1/rabbitmq-server-generic-unix-3.4.1.tar.gz | tar zx
 RUN mv rabbitmq_server-3.4.1 /usr/local/rabbitmq
