@@ -4,8 +4,11 @@ web:
         - nginx/conf:/usr/local/nginx/conf
         - nginx/logs:/usr/local/nginx/logs
         - www:/var/www
+
+    links:
+        - fpm:fpm
 fpm:
-    image: fntlnz/php-fpm:5.5.16
+    image: fntlnz/php-fpm:5.6.6
     volumes:
         - php/etc:/usr/local/php/etc
         - www:/var/www
