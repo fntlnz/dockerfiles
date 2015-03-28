@@ -3,7 +3,8 @@ Version: **5.5.16**
 
 This Dockerfile compiles PHP-FPM.
 
-If you want an example on how to use it with docker-compose and nginx see look [here](https://github.com/fntlnz/dockerfiles/tree/master/docker-compose-examples/nginx-fpm)
+If you want an example on how to use it with docker-compose and nginx take a look [here](https://github.com/fntlnz/dockerfiles/tree/master/docker-compose-examples/nginx-fpm)
+
 ## Volumes
 - `/usr/local/php/etc`
 
