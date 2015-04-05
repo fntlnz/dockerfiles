@@ -1,5 +1,5 @@
 # PHP Debug
-# @version Last commit from master
+# @version Latest commit from master
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
 FROM centos:centos7
 
