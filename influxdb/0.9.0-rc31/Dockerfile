@@ -29,7 +29,9 @@ RUN ln -s /usr/local/go/bin/* /usr/local/bin
 
 # Cleaning
 RUN yum remove git mercurial make bison gcc glibc-devel wget tar -y
-RUN rm -Rf /tmp/go
+RUN yum clean all
+RUN rm -Rf /tmp/*
+RUN rm -Rf /usr/local/go/src
 
 EXPOSE 8083
 EXPOSE 8086
