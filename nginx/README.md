@@ -1,7 +1,9 @@
 # NGIИX
-Latest Version: **1.8.0**
+Latest Version: **1.9.2**
 
 Available versions
+
+- 1.9.2
 - 1.8.0
 - 1.6.2
 - 1.6.1
