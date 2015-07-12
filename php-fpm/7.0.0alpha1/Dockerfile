@@ -1,5 +1,5 @@
 # PHP-FPM
-# @version Latest commit from master
+# @version 7.0.0alpha1
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
 FROM centos:centos7
 

@@ -1,5 +1,5 @@
 # PHP-FPM
-# @version 7.0.0alpha2
+# @version 7.0.0beta1
 # @author Lorenzo Fontana <fontanalorenzo@me.com>
 FROM centos:centos7
 
@@ -11,9 +11,9 @@ RUN yum install gcc gcc-c++ kernel-devel libxml2-devel libxslt-devel openssl-dev
 WORKDIR /tmp
 
 # Download PHP and extract
-RUN wget -nv -O - https://github.com/php/php-src/archive/php-7.0.0alpha2.tar.gz | tar zx
+RUN wget -nv -O - https://github.com/php/php-src/archive/php-7.0.0beta1.tar.gz | tar zx
 
-WORKDIR /tmp/php-src-php-7.0.0alpha2
+WORKDIR /tmp/php-src-php-7.0.0beta1
 
 RUN rm -f configure
 
@@ -27,7 +27,7 @@ RUN make test
 
 RUN useradd fpm
 
-RUN rm -Rf /tmp/php-src-php-7.0.0alpha2
+RUN rm -Rf /tmp/php-src-php-7.0.0beta1
 
 RUN ln -s /usr/local/php/bin/* /usr/local/bin
 WORKDIR /
