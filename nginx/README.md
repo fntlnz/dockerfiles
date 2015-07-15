@@ -1,5 +1,8 @@
-# NGIИX
+![Nginx Logo](http://i.imgur.com/DhBbBQF.png)
+
 Latest Version: **1.9.2**
+
+[View on GitHub](https://github.com/fntlnz/dockerfiles/tree/master/nginx)
 
 Available versions
 
