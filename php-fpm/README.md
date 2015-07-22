@@ -4,6 +4,7 @@ Latest Stable Version: **5.6.11**
 PHP-FPM Docker Images compiled from source
 
 Available versions
+- 7.0.0beta2
 - 7.0.0beta1
 - 7.0.0alpha2
 - 7.0.0alpha1
