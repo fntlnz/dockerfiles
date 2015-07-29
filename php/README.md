@@ -1,11 +1,10 @@
-# PHP
+![PHP](http://php.net/images/logo.php)
 
-Latest Stable Version: **5.6.11**
-Latest Beta Version: **7.0.0beta2**
+| Latest Stable | Latest Beta |
+| ------------- |:-----------:|
+| 5.6.11        | 7.0.0beta2  |
 
-PHP Docker images compiled from source.
-
-Available versions on Docker Hub
+### Available versions on Docker Hub
 
 - 7.0.0beta2
 - 7.0.0beta1
@@ -27,20 +26,12 @@ Available versions on Docker Hub
 docker pull fntlnz/php-fpm
 ```
 
-## Examples
-
-### PHP version
-
-```
-docker run --rm fntlnz/php:7.0.0beta2 php -v
-PHP 7.0.0beta2 (cli) (built: Jul 25 2015 20:16:57) 
-Copyright (c) 1997-2015 The PHP Group
-Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
-```
-
-
-## Volumes
+## Exposed Volumes
 - `/usr/local/php/etc`
+
+| Mount Point               | Description                                                                                    |
+| ------------------------- |:----------------------------------------------------------------------------------------------:|
+| /usr/local/php/etc        | Is the main php config file path. PHP will look here for things `ini` files and `php-fpm.conf` |
 
 
 ## Build
@@ -49,3 +40,49 @@ Build a specific version
 ```
 ./build.sh <version>
 ```
+
+## Examples
+
+### Get the PHP version
+
+```
+docker run --rm fntlnz/php:7.0.0beta2 php -v
+PHP 7.0.0beta2 (cli) (built: Jul 25 2015 20:16:57) 
+Copyright (c) 1997-2015 The PHP Group
+Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
+```
+
+### Create a derivative Dockerfile to add additional PHP extensions
+
+**Create the Dockerfile**
+```
+FROM fntlnz/php:5.6.11
+WORKDIR /tmp
+RUN wget -nv -O - https://pecl.php.net/get/mongo-1.6.10.tgz | tar zx \
+    && cd mongo-1.6.10 \
+    && phpize \
+    && ./configure \
+    && make -j \
+    && make install
+WORKDIR /
+```
+
+**Build it**
+```
+docker build -t you/php:5.6.11
+```
+
+**Check if the Mongo PHP Driver is available**
+
+The `-d extension=mongo.so` command line argument is a cli alternative
+to adding extension loading in the `php.ini`
+```
+docker run --rm you/php:5.6.11 php -d extension=mongo.so -m | grep mongo
+```
+
+
+
+## Pro tip
+![Old School PHP Logo](http://i.imgur.com/QN1UfxT.gif)
+
+I added the [php.net logo](https://github.com/php/web-php/blob/master/images/logo.php#L54) as source for the logo on top of this README  so you can get random running ElePHPant or an old school one. :tada:

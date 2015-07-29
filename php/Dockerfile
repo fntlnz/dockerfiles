@@ -21,7 +21,6 @@ RUN yum update -y \
     && rm -Rf /tmp/php-src-php-VERSION \
     && ln -s /usr/local/php/bin/* /usr/local/bin \
     && ln -s /usr/local/php/sbin/* /usr/local/sbin \
-    && yum remove kerne-devel libxml2-devel postgresql-devel openssl-devel libcurl-devel libicu-devel readline-devel bzip2-devel -y \
     && yum clean all
 
 WORKDIR /
