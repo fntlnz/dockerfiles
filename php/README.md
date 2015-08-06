@@ -2,10 +2,11 @@
 
 | Latest Stable | Latest Beta |
 | ------------- |:-----------:|
-| 5.6.11        | 7.0.0beta2  |
+| 5.6.11        | 7.0.0beta3  |
 
 ### Available versions on Docker Hub
 
+- 7.0.0beta3
 - 7.0.0beta2
 - 7.0.0beta1
 - 7.0.0alpha2
@@ -23,7 +24,7 @@
 ## Get it
 
 ```
-docker pull fntlnz/php-fpm
+docker pull fntlnz/php
 ```
 
 ## Exposed Volumes
@@ -46,7 +47,7 @@ Build a specific version
 ### Get the PHP version
 
 ```
-docker run --rm fntlnz/php:7.0.0beta2 php -v
+docker run --rm fntlnz/php:7.0.0beta3 php -v
 PHP 7.0.0beta2 (cli) (built: Jul 25 2015 20:16:57) 
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
