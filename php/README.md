@@ -2,15 +2,13 @@
 
 | Latest Stable | Latest Beta |
 | ------------- |:-----------:|
-| 5.6.11        | 7.0.0beta3  |
+| 5.6.12        | 7.0.0beta3  |
 
 ### Available versions on Docker Hub
 
-- 7.0.0beta3
-- 7.0.0beta2
-- 7.0.0beta1
-- 7.0.0alpha2
-- 7.0.0alpha1
+**Stable**
+
+- 5.6.12
 - 5.6.11
 - 5.6.10
 - 5.6.9
@@ -21,6 +19,14 @@
 - 5.5.16
 - 5.4.43
 
+**Alpha/Beta**
+
+- 7.0.0beta3
+- 7.0.0beta2
+- 7.0.0beta1
+- 7.0.0alpha2
+- 7.0.0alpha1
+
 ## Get it
 
 ```
@@ -30,9 +36,9 @@ docker pull fntlnz/php
 ## Exposed Volumes
 - `/usr/local/php/etc`
 
-| Mount Point               | Description                                                                                    |
-| ------------------------- |:----------------------------------------------------------------------------------------------:|
-| /usr/local/php/etc        | Is the main php config file path. PHP will look here for things `ini` files and `php-fpm.conf` |
+| Mount Point               | Description                                                                                         |
+| ------------------------- |:---------------------------------------------------------------------------------------------------:|
+| /usr/local/php/etc        | Is the main php config file path. PHP will look here for things like `ini` files and `php-fpm.conf` |
 
 
 ## Build
@@ -57,7 +63,7 @@ Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
 
 **Create the Dockerfile**
 ```
-FROM fntlnz/php:5.6.11
+FROM fntlnz/php:5.6.12
 WORKDIR /tmp
 RUN wget -nv -O - https://pecl.php.net/get/mongo-1.6.10.tgz | tar zx \
     && cd mongo-1.6.10 \
@@ -70,7 +76,7 @@ WORKDIR /
 
 **Build it**
 ```
-docker build -t you/php:5.6.11
+docker build -t you/php:5.6.12
 ```
 
 **Check if the Mongo PHP Driver is available**
@@ -78,7 +84,7 @@ docker build -t you/php:5.6.11
 The `-d extension=mongo.so` command line argument is a cli alternative
 to adding extension loading in the `php.ini`
 ```
-docker run --rm you/php:5.6.11 php -d extension=mongo.so -m | grep mongo
+docker run --rm you/php:5.6.12 php -d extension=mongo.so -m | grep mongo
 ```
 
 
