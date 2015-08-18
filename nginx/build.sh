@@ -2,9 +2,9 @@
 source "$(dirname "$0")/../utils/utils.sh"
 
 template_path=$(dirname "$0")/Dockerfile
-tmp_path=/tmp/dockerfiles-php-tmp
-image_name=php
-available_versions="5.4.43 5.4.44 5.5.16 5.5.27 5.5.28 5.6.6 5.6.7 5.6.8 5.6.9 5.6.10 5.6.11 5.6.12 7.0.0alpha1 7.0.0alpha2 7.0.0beta1 7.0.0beta2 7.0.0beta3"
+tmp_path=/tmp/dockerfiles-nginx-tmp
+image_name=nginx
+available_versions="1.6.0 1.6.1 1.6.2 1.6.3 1.7.9 1.7.10 1.7.11 1.8.0 1.9.0 1.9.1 1.9.2 1.9.3 1.9.4"
 
 if [ -z "$1" ]; then
     echo "Usage: "
