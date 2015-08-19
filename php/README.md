@@ -1,8 +1,8 @@
 ![PHP](http://php.net/images/logo.php)
 
-| Latest Stable | Latest Beta |
+| Stable        | Mainline    |
 | ------------- |:-----------:|
-| 5.6.12        | 7.0.0beta3  |
+| 5.6.12        | 7.0.0RC1    |
 
 ### Available versions on Docker Hub
 
@@ -21,8 +21,9 @@
 - 5.4.44
 - 5.4.43
 
-**Alpha/Beta**
+**Mainline**
 
+- 7.0.0RC1
 - 7.0.0beta3
 - 7.0.0beta2
 - 7.0.0beta1
@@ -55,7 +56,7 @@ Build a specific version
 ### Get the PHP version
 
 ```
-docker run --rm fntlnz/php:7.0.0beta3 php -v
+docker run --rm fntlnz/php:7.0.0RC1 php -v
 PHP 7.0.0beta2 (cli) (built: Jul 25 2015 20:16:57) 
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
