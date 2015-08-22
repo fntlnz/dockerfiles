@@ -73,7 +73,7 @@ Build a specific version
 
 ```
 docker run --rm fntlnz/php:7.0.0RC1 php -v
-PHP 7.0.0beta2 (cli) (built: Jul 25 2015 20:16:57) 
+PHP 7.0.0RC1 (cli) (built: Aug 22 2015 21:48:29) 
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
 ```
