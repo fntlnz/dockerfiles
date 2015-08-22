@@ -1,18 +1,48 @@
-function check_version {
-    requested_version=$1
-    available_versions=${2}
-    available=0
-    for version in ${available_versions}
-    do
-        if [ $version = $requested_version ];then
-            available=1
-            break
-        fi
-    done
+# Provide some common utility functions
 
-    if [ "$available" -eq 0 ]; then
-        echo "Requested version is not available"
-        echo "Please try with one of these: ${available_versions}"
-        exit 1
+############################################################
+# Check if a version is available against a list of versions
+# Globals:
+#   BACKUP_DIR
+#   ORACLE_SID
+# Arguments:
+#   requested_version
+#   available_versions
+# Returns:
+#   None
+############################################################
+function check_version {
+  requested_version=$1
+  available_versions=${2}
+  available=0
+  for version in ${available_versions}
+  do
+    if [ $version = $requested_version ];then
+      available=1
+      break
     fi
+  done
+
+  if [ "$available" -eq 0 ]; then
+    echo "Requested version is not available"
+    echo "Please try with one of these: ${available_versions}"
+    exit 1
+  fi
 }
+
+############################################################
+# Get the latest version available in a list of versions
+# Globals:
+#   BACKUP_DIR
+#   ORACLE_SID
+# Arguments:
+#   available_versions
+# Returns:
+#   latest_version
+############################################################
+function latest_version {
+  available_versions=${1}
+  echo ${available_versions[${#available_versions[@]} - 1]}
+}
+
+# vim:set et sw=2
