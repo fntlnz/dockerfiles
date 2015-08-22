@@ -10,6 +10,9 @@
 - [Exposed Volumes](#exposed-volumes)
 - [Build](#build)
 - [Examples](#examples)
+   * [Get the PHP version](#get-the-php-version)
+   * [Create a derivative Dockerfile to add additional PHP extensions](#create-a-derivative-dockerfile-to-add-additional-php-extensions)
+- [Pro tip](#pro-tip)
 
 ### Available versions on Docker Hub
 
