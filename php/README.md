@@ -4,6 +4,13 @@
 | ------------- |:--------------------:|:--------------:|:------------------------:|
 | 5.6.12        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC1                 |
 
+## Index
+- [Available versions on Docker Hub](#available-versions-on-docker-hub)
+- [Get from docker registry](#get-from-docker-registry)
+- [Exposed Volumes](#exposed-volumes)
+- [Build](#build)
+- [Examples](#examples)
+
 ### Available versions on Docker Hub
 
 **Stable**
@@ -36,7 +43,7 @@
 - 7.0.0RC1
 - 5.6.13RC1
 
-## Get it
+## Get from docker registry
 
 ```
 docker pull fntlnz/php:<version>
