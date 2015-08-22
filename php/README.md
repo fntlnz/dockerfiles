@@ -1,14 +1,14 @@
 ![PHP](http://php.net/images/logo.php)
 
-| Stable        | Mainline    |
-| ------------- |:-----------:|
-| 5.6.12        | 7.0.0RC1    |
+| Latest Stable | Latest Alpha         | Latest Beta    | Latest Release Candidate |
+| ------------- |:--------------------:|:--------------:|:------------------------:|
+| 5.6.12        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC1                 |
 
 ### Available versions on Docker Hub
 
 **Stable**
 
-- 5.6.12
+- 5.6.12 - *latest*
 - 5.6.11
 - 5.6.10
 - 5.6.9
@@ -21,19 +21,25 @@
 - 5.4.44
 - 5.4.43
 
-**Mainline**
+**Alpha**
 
-- 7.0.0RC1
+- 7.0.0alpha2
+- 7.0.0alpha1
+
+
+**Beta**
 - 7.0.0beta3
 - 7.0.0beta2
 - 7.0.0beta1
-- 7.0.0alpha2
-- 7.0.0alpha1
+
+**Release Candidate**
+- 7.0.0RC1
+- 5.6.13RC1
 
 ## Get it
 
 ```
-docker pull fntlnz/php
+docker pull fntlnz/php:<version>
 ```
 
 ## Exposed Volumes
