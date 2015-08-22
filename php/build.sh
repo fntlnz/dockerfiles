@@ -22,9 +22,10 @@ dockerfile_path=${tmp_path}/${image_name}-${version}
 cat $template_path | m4 -D VERSION=$version > $dockerfile_path
 docker build -t ${vendor_name}/${image_name}:${version} -f $dockerfile_path $tmp_path
 
-last = last_version "${available_versions}"
-if [ "$version" = "$last" ]; then
-  docker tag ${vendor_name}/{$image_name}:${version} ${vendor_name}/{$image_name}:latest
+latest_version=$(latest_version "${available_versions}")
+if [ "$version" = "$latest_version" ]; then
+  docker rmi -f fntlnz/php:latest
+  docker tag ${vendor_name}/${image_name}:${version} ${vendor_name}/${image_name}:latest
 fi;
 
 rm $dockerfile_path

@@ -41,8 +41,7 @@ function check_version {
 #   latest_version
 ############################################################
 function latest_version {
-  available_versions=${1}
-  echo ${available_versions[${#available_versions[@]} - 1]}
+  echo "$1" | rev | cut -d " " -f1 | rev
 }
 
 # vim:set et sw=2
