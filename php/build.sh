@@ -19,7 +19,19 @@ check_version $version "${available_versions}"
 
 mkdir -p $tmp_path
 dockerfile_path=${tmp_path}/${image_name}-${version}
-cat $template_path | m4 -D VERSION=$version > $dockerfile_path
+
+configure_command="./configure --enable-static --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc/ \
+--disable-cgi --without-pear --with-sqlite3 --with-zlib --with-curl=/usr/bin/curl \
+--with-openssl --libdir=/usr/lib64 --with-libdir=lib64 --enable-opcache --enable-fileinfo --enable-mbstring \
+--with-readline --enable-zip --with-pdo-mysql --with-pdo-pgsql --with-mysqli --with-pdo-sqlite \
+--enable-sockets --enable-fpm --enable-intl"
+
+if [[ $version == 7* ]]; then
+    configure_command="${configure_command} --enable-opcache-file"
+fi
+
+cat $template_path | m4 -D VERSION=$version | m4 -D CONFIGURE_COMMAND="$configure_command" > $dockerfile_path
+
 docker build -t ${vendor_name}/${image_name}:${version} -f $dockerfile_path $tmp_path
 
 latest_version=$(latest_version "${available_versions}")
