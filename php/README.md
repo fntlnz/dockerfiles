@@ -2,7 +2,7 @@
 
 | Latest Stable | Latest Alpha         | Latest Beta    | Latest Release Candidate |
 | ------------- |:--------------------:|:--------------:|:------------------------:|
-| 5.6.12        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC1                 |
+| 5.6.12        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC2                 |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
@@ -31,20 +31,22 @@
 - 5.4.44
 - 5.4.43
 
-**Alpha**
-
-- 7.0.0alpha2
-- 7.0.0alpha1
-
+**Release Candidate**
+- 7.0.0RC2
+- 7.0.0RC1
+- 5.6.13RC1
 
 **Beta**
 - 7.0.0beta3
 - 7.0.0beta2
 - 7.0.0beta1
 
-**Release Candidate**
-- 7.0.0RC1
-- 5.6.13RC1
+**Alpha**
+
+- 7.0.0alpha2
+- 7.0.0alpha1
+
+
 
 ## Get from docker registry
 
