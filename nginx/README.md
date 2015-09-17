@@ -6,7 +6,7 @@ Latest Stable Version: **1.8.0**
 
 Available versions
 
-- 1.9.4
+- 1.9.4 - *latest*
 - 1.9.3
 - 1.9.2
 - 1.9.1

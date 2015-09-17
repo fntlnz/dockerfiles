@@ -36,7 +36,7 @@ docker build -t ${vendor_name}/${image_name}:${version} -f $dockerfile_path $tmp
 
 latest_version=$(latest_version "${available_versions}")
 if [ "$version" = "$latest_version" ]; then
-  docker rmi -f fntlnz/php:latest
+  docker rmi -f ${vendor_name}/${image_name}:latest
   docker tag ${vendor_name}/${image_name}:${version} ${vendor_name}/${image_name}:latest
 fi;
 
