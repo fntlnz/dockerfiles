@@ -2,7 +2,7 @@
 
 | Latest Stable | Latest Alpha         | Latest Beta    | Latest Release Candidate |
 | ------------- |:--------------------:|:--------------:|:------------------------:|
-| 5.6.13        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC2                 |
+| 5.6.13        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC3                 |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
@@ -35,6 +35,7 @@
 - 5.4.43
 
 **Release Candidate**
+- 7.0.0RC3
 - 7.0.0RC2
 - 7.0.0RC1
 - 5.6.13RC1
@@ -54,7 +55,7 @@
 ## Get from docker registry
 
 ```
-docker pull fntlnz/php:<version>
+docker pull fntlnz/php:latest
 ```
 
 ## Exposed Volumes
