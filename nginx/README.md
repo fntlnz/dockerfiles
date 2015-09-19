@@ -1,5 +1,9 @@
 ![Nginx Logo](http://i.imgur.com/DhBbBQF.png)
 
+```
+docker pull fntlnz/nginx:latest
+```
+
 | Latest Stable | Latest Mainline      |
 | ------------- |:--------------------:|
 | 1.8.0         | 1.9.4                |
@@ -19,8 +23,3 @@
 - 1.6.2
 - 1.6.1
 - 1.6.0
-
-## Get from docker registry
-
-```
-docker pull fntlnz/nginx:latest

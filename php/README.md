@@ -1,12 +1,15 @@
 ![PHP](http://php.net/images/logo.php)
 
+```
+docker pull fntlnz/php:latest
+```
+
 | Latest Stable | Latest Alpha         | Latest Beta    | Latest Release Candidate |
 | ------------- |:--------------------:|:--------------:|:------------------------:|
 | 5.6.13        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC3                 |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
-- [Get from docker registry](#get-from-docker-registry)
 - [Exposed Volumes](#exposed-volumes)
 - [Build](#build)
 - [Examples](#examples)
@@ -51,13 +54,6 @@
 - 7.0.0alpha2
 - 7.0.0alpha1
 
-
-
-## Get from docker registry
-
-```
-docker pull fntlnz/php:latest
-```
 
 ## Exposed Volumes
 - `/usr/local/php/etc`
