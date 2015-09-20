@@ -8,6 +8,10 @@ docker pull fntlnz/nginx:latest
 | ------------- |:--------------------:|
 | 1.8.0         | 1.9.4                |
 
+## Index
+- [Available versions on Docker Hub](#available-versions-on-docker-hub)
+- [Build](#build)
+
 ### Available versions on Docker Hub
 
 - 1.9.4 - *latest*
@@ -23,3 +27,10 @@ docker pull fntlnz/nginx:latest
 - 1.6.2
 - 1.6.1
 - 1.6.0
+
+## Build
+
+Build a specific version
+```
+./build.sh <version>
+```

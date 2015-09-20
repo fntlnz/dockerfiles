@@ -11,10 +11,10 @@ docker pull fntlnz/php:latest
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
 - [Exposed Volumes](#exposed-volumes)
-- [Build](#build)
 - [Examples](#examples)
    * [Get the PHP version](#get-the-php-version)
    * [Create a derivative Dockerfile to add additional PHP extensions](#create-a-derivative-dockerfile-to-add-additional-php-extensions)
+- [Build](#build)
 - [Pro tip](#pro-tip)
 
 ### Available versions on Docker Hub
@@ -63,13 +63,6 @@ docker pull fntlnz/php:latest
 | /usr/local/php/etc        | Is the main php config file path. PHP will look here for things like `ini` files and `php-fpm.conf` |
 
 
-## Build
-
-Build a specific version
-```
-./build.sh <version>
-```
-
 ## Examples
 
 ### Get the PHP version
@@ -109,7 +102,12 @@ to adding extension loading in the `php.ini`
 docker run --rm you/php:5.6.13 php -d extension=mongo.so -m | grep mongo
 ```
 
+## Build
 
+Build a specific version
+```
+./build.sh <version>
+```
 
 ## Pro tip
 ![Old School PHP Logo](http://i.imgur.com/QN1UfxT.gif)
