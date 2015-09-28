@@ -44,4 +44,4 @@ function latest_version {
   echo "$1" | rev | cut -d " " -f1 | rev
 }
 
-# vim:set et sw=2
+# vim: ai ts=2 sw=2 et sts=2 ft=sh

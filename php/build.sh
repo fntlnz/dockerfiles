@@ -17,7 +17,7 @@ version=$1
 
 check_version $version "${available_versions}"
 
-configure_command="./configure --enable-static --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc/ \
+configure_command="./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc/ \
 --disable-cgi --without-pear --with-sqlite3 --with-zlib --with-curl=/usr/bin/curl \
 --with-openssl --libdir=/usr/lib64 --with-libdir=lib64 --enable-opcache --enable-fileinfo --enable-mbstring \
 --with-readline --enable-zip --with-pdo-mysql --with-pdo-pgsql --with-mysqli --with-pdo-sqlite \
@@ -35,4 +35,4 @@ if [ "$version" = "$latest_version" ]; then
   docker tag ${vendor_name}/${image_name}:${version} ${vendor_name}/${image_name}:latest
 fi;
 
-# vim:set et sw=2
+# vim: ai ts=2 sw=2 et sts=2 ft=sh
