@@ -23,6 +23,7 @@ configure_command="./configure --prefix=/usr/local/php --with-config-file-path=/
 --with-readline --enable-zip --with-pdo-mysql --with-pdo-pgsql --with-mysqli --with-pdo-sqlite \
 --enable-sockets --enable-fpm --enable-intl --enable-pcntl"
 
+# opcache file is available since PHP 7
 if [[ $version == 7* ]]; then
     configure_command="${configure_command} --enable-opcache-file"
 fi
