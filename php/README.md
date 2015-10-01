@@ -6,7 +6,7 @@ docker pull fntlnz/php:latest
 
 | Latest Stable | Latest Alpha         | Latest Beta    | Latest Release Candidate |
 | ------------- |:--------------------:|:--------------:|:------------------------:|
-| 5.6.13        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC3                 |
+| 5.6.14        | 7.0.0alpha2          | 7.0.0beta3     | 7.0.0RC4                 |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
@@ -20,8 +20,8 @@ docker pull fntlnz/php:latest
 ### Available versions on Docker Hub
 
 **Stable**
-
-- 5.6.13 - *latest*
+- 5.6.14 - *latest*
+- 5.6.13
 - 5.6.12
 - 5.6.11
 - 5.6.10
@@ -30,6 +30,7 @@ docker pull fntlnz/php:latest
 - 5.6.7
 - 5.6.6
 - 5.6.5
+- 5.5.30
 - 5.5.29
 - 5.5.28
 - 5.5.27
@@ -39,6 +40,7 @@ docker pull fntlnz/php:latest
 - 5.4.43
 
 **Release Candidate**
+- 7.0.0RC4
 - 7.0.0RC3
 - 7.0.0RC2
 - 7.0.0RC1
