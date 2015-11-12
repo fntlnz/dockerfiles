@@ -6,7 +6,7 @@ docker pull fntlnz/php:latest
 
 | Latest Stable | Latest Release Candidate |
 | ------------- |:------------------------:|
-| 5.6.15        | 7.0.0RC6                 |
+| 5.6.15        | 7.0.0RC7                 |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
@@ -41,6 +41,7 @@ docker pull fntlnz/php:latest
 - 5.4.43
 
 **Release Candidate**
+- 7.0.0RC7
 - 7.0.0RC6
 - 7.0.0RC5
 - 7.0.0RC4
@@ -86,10 +87,10 @@ Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
 
 **Create the Dockerfile**
 ```
-FROM fntlnz/php:5.6.13
+FROM fntlnz/php:5.6.15
 WORKDIR /tmp
-RUN wget -nv -O - https://pecl.php.net/get/mongo-1.6.10.tgz | tar zx \
-    && cd mongo-1.6.10 \
+RUN wget -nv -O - https://pecl.php.net/get/mongo-1.6.11.tgz | tar zx \
+    && cd mongo-1.6.11 \
     && phpize \
     && ./configure \
     && make -j \
@@ -99,7 +100,7 @@ WORKDIR /
 
 **Build it**
 ```
-docker build -t you/php:5.6.13
+docker build -t you/php:5.6.15
 ```
 
 **Check if the Mongo PHP Driver is available**
@@ -107,7 +108,7 @@ docker build -t you/php:5.6.13
 The `-d extension=mongo.so` command line argument is a cli alternative
 to adding extension loading in the `php.ini`
 ```
-docker run --rm you/php:5.6.13 php -d extension=mongo.so -m | grep mongo
+docker run --rm you/php:5.6.15 php -d extension=mongo.so -m | grep mongo
 ```
 
 ## Build
