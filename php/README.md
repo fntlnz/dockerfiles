@@ -15,7 +15,8 @@ docker pull fntlnz/php:latest
 ### Available versions on Docker Hub
 
 **Stable**
-- 7.0.2 - *latest*
+- 7.0.3 - *latest*
+- 7.0.2
 - 7.0.1
 - 7.0.0
 - 5.6.16
