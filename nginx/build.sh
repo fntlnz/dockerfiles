@@ -5,7 +5,7 @@ vendor_name=fntlnz
 image_name=nginx
 
 template_path=$(dirname "$0")/Dockerfile
-available_versions="1.6.0 1.6.1 1.6.2 1.6.3 1.7.9 1.7.10 1.7.11 1.8.0 1.9.0 1.9.1 1.9.2 1.9.3 1.9.4 1.9.5"
+available_versions="1.6.0 1.6.1 1.6.2 1.6.3 1.7.9 1.7.10 1.7.11 1.8.0 1.8.1 1.9.0 1.9.1 1.9.2 1.9.3 1.9.4 1.9.5 1.9.6 1.9.7 1.9.8 1.9.9 1.9.10 1.9.11 1.9.12 1.9.13 1.9.14 1.9.15"
 
 if [ -z "$1" ]; then
   echo "Usage: "
