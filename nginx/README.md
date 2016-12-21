@@ -6,7 +6,7 @@ docker pull fntlnz/nginx:latest
 
 | Latest Stable | Latest Mainline      |
 | ------------- |:--------------------:|
-| 1.10.1        | 1.11.1               |
+| 1.10.2        | 1.11.7               |
 
 ## Index
 - [Available versions on Docker Hub](#available-versions-on-docker-hub)
@@ -14,9 +14,16 @@ docker pull fntlnz/nginx:latest
 
 ### Available versions on Docker Hub
 
-- 1.11.1 - *latest mainline*
+- 1.11.7 - *latest mainline*
+- 1.11.6
+- 1.11.5
+- 1.11.4
+- 1.11.3
+- 1.11.2
+- 1.11.1
 - 1.11.0
-- 1.10.1 - *latest stable*
+- 1.10.2 - *latest stable*
+- 1.10.1
 - 1.10.0
 - 1.9.15
 - 1.9.14
